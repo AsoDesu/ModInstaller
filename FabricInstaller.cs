@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Installer.util;
+using RestSharp;
 
 namespace Installer;
 
@@ -17,11 +18,9 @@ public class FabricInstaller
         Directory.CreateDirectory(versionPath);
         File.Create($"{versionPath}\\{loaderName}.jar");
         
-        var client = new RestClient("https://meta.fabricmc.net/v2/versions");
-        var req = new RestRequest($"/loader/{Program.gameVersion}/{Program.fabricVersion}/profile/json");
-        
-        var response = client.GetAsync<Object>(req);
-        File.WriteAllText($"{versionPath}\\{loaderName}.json", response.Result.ToString());
+        var data = new ModDownloader().getString(
+            $"https://meta.fabricmc.net/v2/versions/loader/{Program.gameVersion}/{Program.fabricVersion}/profile/json");
+        File.WriteAllText($"{versionPath}\\{loaderName}.json", data);
     }
 
     private void log(string s)

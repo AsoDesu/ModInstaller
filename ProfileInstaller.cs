@@ -21,17 +21,17 @@ public class ProfileInstaller
         newProfile.created = DateTime.Now;
         newProfile.gameDir = ModInstaller.nationDir;
         newProfile.icon =
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsklEQVQ4y2NgGNTAMDnlv5yHKRiTrBGE/Zrb4Jhog2AaU2fXYmCYi3BqBknCNJ/+c/f/1idR/zsOR/0vXONJnCEgCWTN0y9mgxWHT3RGMURAx/A/Vs0g00EKkDVLawtgGAJSh2EIzACQIhAGOZ0sA0AKQApBGpANgIUFCGM1AD0QkV0B8g6ID5PDqhnZFciGwJwOEsNrOwyAJNETEcxAgpqRDYEZBMMwMZKSNEwTyRpJAQAl0P1Xps3F9QAAAABJRU5ErkJggg==";
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA0klEQVR42u3YrwrCUBiH4V2MSVgzGwSTBpPBZlNMNptdNAvejcFLEUzewrGenbAxhLE/zwu/NA3fEwaaZZIkSZIkSX92vH1DvKrn8/2nsO35XRgAAADaXXpAemDdg9Pn6QAAANDu0oPGi1fpZvm9sPTg9PMAAADodvluFOJdD8/Cev9jCQCAgQOsL8tQNgAAAAyr9KUIAACAbr/Umv4+AAAAug2yeaxCPAAAAHS76WkS4lWBAAAAoF8AdUEAAADQb4CqP0AAAAAwLIAqEAAAADTaD2U8HMx4JY/+AAAAAElFTkSuQmCC";
         newProfile.lastUsed = DateTime.Now;
         newProfile.lastVersionId = $"{FabricInstaller.loaderName}";
-        newProfile.name = "Nation Origins 3";
+        newProfile.name = "Nation SMP";
         newProfile.type = "custom";
 
-        if (profiles.ContainsKey("nation-origins-3"))
+        if (profiles.ContainsKey("nation-smp"))
         {
-            profiles.Remove("nation-origins-3");
+            profiles.Remove("nation-smp");
         }
-        profiles.Add("nation-origins-3", newProfile);
+        profiles.Add("nation-smp", newProfile);
 
         log("Saved profiles.json!");
         json.profiles = profiles;
