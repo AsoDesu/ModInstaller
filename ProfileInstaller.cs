@@ -24,14 +24,14 @@ public class ProfileInstaller
             "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA0klEQVR42u3YrwrCUBiH4V2MSVgzGwSTBpPBZlNMNptdNAvejcFLEUzewrGenbAxhLE/zwu/NA3fEwaaZZIkSZIkSX92vH1DvKrn8/2nsO35XRgAAADaXXpAemDdg9Pn6QAAANDu0oPGi1fpZvm9sPTg9PMAAADodvluFOJdD8/Cev9jCQCAgQOsL8tQNgAAAAyr9KUIAACAbr/Umv4+AAAAug2yeaxCPAAAAHS76WkS4lWBAAAAoF8AdUEAAADQb4CqP0AAAAAwLIAqEAAAADTaD2U8HMx4JY/+AAAAAElFTkSuQmCC";
         newProfile.lastUsed = DateTime.Now;
         newProfile.lastVersionId = $"{FabricInstaller.loaderName}";
-        newProfile.name = "Nation SMP";
+        newProfile.name = "Nation SMP Bonded Life";
         newProfile.type = "custom";
 
-        if (profiles.ContainsKey("nation-smp"))
+        if (profiles.ContainsKey("nation-bonded"))
         {
-            profiles.Remove("nation-smp");
+            profiles.Remove("nation-bonded");
         }
-        profiles.Add("nation-smp", newProfile);
+        profiles.Add("nation-bonded", newProfile);
 
         log("Saved profiles.json!");
         json.profiles = profiles;

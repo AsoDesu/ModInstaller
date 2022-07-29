@@ -14,7 +14,7 @@ public class ModDownloader
 
     public String[] getModList()
     {
-        var lines = getString("https://aspiring-luxurious-metatarsal.glitch.me/modlist.txt").Split("\n");
+        var lines = getString("https://aspiring-luxurious-metatarsal.glitch.me/bondedLifeModList.txt").Split("\n");
         return lines;
     }
 

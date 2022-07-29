@@ -4,7 +4,7 @@ namespace Installer;
 
 public class ModInstaller
 {
-    public static string nationDir = $"{Program.roaming}\\.nationsmp\\smp";
+    public static string nationDir = $"{Program.roaming}\\.nationsmp\\bonded";
     public static string modsDir = $"{nationDir}\\mods";
     public static string configDir = $"{nationDir}\\config";
 
@@ -34,14 +34,6 @@ public class ModInstaller
             byte[] modjar = downloader.downloadMod(url);
             File.WriteAllBytes($"{modsDir}\\{name}.jar", modjar);
         }
-        
-        log("Setting default Minimap config");
-        if (!Directory.Exists(configDir))
-        {
-            log("Creating Config Directory");
-            Directory.CreateDirectory(configDir);
-        }
-        File.WriteAllText($"{configDir}\\xaerominimap.txt", downloader.getString("https://aspiring-luxurious-metatarsal.glitch.me/xaerominimap.txt"));
 
         log($"Finished installing mods!");
     }

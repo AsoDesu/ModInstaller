@@ -7,8 +7,8 @@ internal class Program
 {
     public static string roaming;
     public static string mcDir;
-    public static string gameVersion = "1.18.2";
-    public static string fabricVersion = "0.13.3";
+    public static string gameVersion = "1.19";
+    public static string fabricVersion = "0.14.8";
 
     public static void Main(string[] args)
     {
